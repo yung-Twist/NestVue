@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS `user`(
+    `id` INT UNSIGNED AUTO_INCREMENT KEY COMMENT '用户ID',
+    `nickname` VARCHAR(20) NOT NULL COMMENT '用户名',
+    `tel` CHAR(11) UNIQUE COMMENT '手机',
+    `avatar` VARCHAR(200) COMMENT '头像',
+    `update_time` timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+    `create_time` timestamp COMMENT '创建时间'
+)ENGINE=INNODB DEFAULT CHARSET=UTF8;
